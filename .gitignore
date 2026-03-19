@@ -1,0 +1,16 @@
+# Old blog images (not needed - new blog will use Sanity)
+heyciara.com/wp-content/uploads/
+
+# HTTrack artifacts
+hts-cache/
+hts-log.txt
+cookies.txt
+backblue.gif
+fade.gif
+
+# ShowIt CDN images (loads from https://static.showit.co CDN)
+static.showit.co/
+
+# OS files
+.DS_Store
+Thumbs.db

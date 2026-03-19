@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find 'C:/My Web Sites/mary' -path */static.showit*)",
+      "Bash(xargs sed:*)",
+      "Bash(npm --version)",
+      "Bash(xargs du:*)"
+    ]
+  }
+}

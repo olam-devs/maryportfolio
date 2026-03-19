@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/heyciara.com/index.html" },
+    { "source": "/about", "destination": "/heyciara.com/about.html" },
+    { "source": "/contact", "destination": "/heyciara.com/contact.html" },
+    { "source": "/travel", "destination": "/heyciara.com/travel.html" },
+    { "source": "/shop", "destination": "/heyciara.com/shop.html" },
+    { "source": "/portfolio", "destination": "/heyciara.com/portfolio.html" },
+    { "source": "/blog", "destination": "/heyciara.com/blog/index.html" }
+  ]
+}
