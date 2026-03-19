@@ -4,7 +4,9 @@
       "Bash(find 'C:/My Web Sites/mary' -path */static.showit*)",
       "Bash(xargs sed:*)",
       "Bash(npm --version)",
-      "Bash(xargs du:*)"
+      "Bash(xargs du:*)",
+      "Bash(ls *.html)",
+      "Bash(ls -d */)"
     ]
   }
 }
