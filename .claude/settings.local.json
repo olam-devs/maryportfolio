@@ -6,7 +6,15 @@
       "Bash(npm --version)",
       "Bash(xargs du:*)",
       "Bash(ls *.html)",
-      "Bash(ls -d */)"
+      "Bash(ls -d */)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(node:*)",
+      "Bash(sed -i 's/.d .sie-main-hero-1_0 {left:0px;top:0px;width:1207px;height:649px;}/.d .sie-main-hero-1_0 {left:0px;top:0px;width:1200px;height:1600px;}/g' \"C:/My Web Sites/mary/about.html\")",
+      "Bash(sed -i 's/.m .sie-main-hero-1_0 {left:0px;top:0px;width:320px;height:576px;}/.m .sie-main-hero-1_0 {left:0px;top:0px;width:320px;height:427px;}/g' \"C:/My Web Sites/mary/about.html\")",
+      "Bash(while IFS= read -r f)",
+      "Bash(do sed:*)",
+      "Bash(done)"
     ]
   }
 }
