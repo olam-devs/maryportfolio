@@ -2,14 +2,20 @@
    HeyMary Custom Overrides
    ============================================= */
 
-/* --- LOGO: Replace Hey Ciara CDN image with Hey Mary text --- */
+/* --- LOGO: Hide all Hey Ciara CDN logo images --- */
 .sie-mainmenu_1 .se-img,
-.sie-menu2nd_1 .se-img {
+.sie-menu2nd_1 .se-img,
+.sie-mainmenu_view-1_6 .se-img,
+.sie-mainmenu_desktop-sidebar_6 .se-img,
+.sie-navigation-secondary-menu_view-1_9 .se-img,
+.sie-mobile-nav_13 .se-img {
   background-image: none !important;
 }
 
+/* Mobile nav logo (147×29px) */
 .sie-mainmenu_1,
-.sie-menu2nd_1 {
+.sie-menu2nd_1,
+.sie-navigation-secondary-menu_view-1_9 {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -17,14 +23,62 @@
 }
 
 .sie-mainmenu_1::after,
-.sie-menu2nd_1::after {
+.sie-menu2nd_1::after,
+.sie-navigation-secondary-menu_view-1_9::after {
   content: 'Hey Mary';
   font-family: 'Marquette Script', cursive;
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: 700;
   color: #000000;
   white-space: nowrap;
   line-height: 1;
   pointer-events: none;
+}
+
+/* Desktop sidebar/nav logos (261×91px) */
+.sie-mainmenu_view-1_6,
+.sie-mainmenu_desktop-sidebar_6 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+.sie-mainmenu_view-1_6::after,
+.sie-mainmenu_desktop-sidebar_6::after {
+  content: 'Hey Mary';
+  font-family: 'Marquette Script', cursive;
+  font-size: 52px;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Large centered logo (840×185px desktop / 217×46px mobile) */
+.sie-mobile-nav_13 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+.sie-mobile-nav_13::after {
+  content: 'Hey Mary';
+  font-family: 'Marquette Script', cursive;
+  font-size: 90px;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .sie-mobile-nav_13::after {
+    font-size: 36px;
+  }
 }
 
 /* --- STAMPS: Replace Hey Ciara stamp CDN images with Mary text --- */
@@ -45,6 +99,7 @@
   content: 'Mary';
   font-family: 'Marquette Script', cursive;
   font-size: 26px;
+  font-weight: 700;
   color: #000000;
   border: 2px solid #000000;
   border-radius: 50%;
