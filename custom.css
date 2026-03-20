@@ -1,0 +1,57 @@
+/* =============================================
+   HeyMary Custom Overrides
+   ============================================= */
+
+/* --- LOGO: Replace Hey Ciara CDN image with Hey Mary text --- */
+.sie-mainmenu_1 .se-img,
+.sie-menu2nd_1 .se-img {
+  background-image: none !important;
+}
+
+.sie-mainmenu_1,
+.sie-menu2nd_1 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+.sie-mainmenu_1::after,
+.sie-menu2nd_1::after {
+  content: 'Hey Mary';
+  font-family: 'Marquette Script', cursive;
+  font-size: 30px;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* --- STAMPS: Replace Hey Ciara stamp CDN images with Mary text --- */
+.sie-life-before_6 .se-img,
+.sie-9-5-job_3 .se-img {
+  background-image: none !important;
+}
+
+.sie-life-before_6,
+.sie-9-5-job_3 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.sie-life-before_6::after,
+.sie-9-5-job_3::after {
+  content: 'Mary';
+  font-family: 'Marquette Script', cursive;
+  font-size: 26px;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  padding: 12px 16px;
+  transform: rotate(-12deg);
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+}
