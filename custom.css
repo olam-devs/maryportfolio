@@ -81,6 +81,14 @@
   }
 }
 
+/* --- NOW SECTION: Uppercase white statement --- */
+.sie-now_2-text {
+  text-transform: uppercase !important;
+  font-size: 1.35em !important;
+  color: rgba(255,255,255,1) !important;
+  letter-spacing: 0.04em !important;
+}
+
 /* --- STAMPS: Replace Hey Ciara stamp CDN images with Mary text --- */
 .sie-life-before_6 .se-img,
 .sie-9-5-job_3 .se-img {
