@@ -7,8 +7,11 @@
 .sie-menu2nd_1 .se-img,
 .sie-mainmenu_view-1_6 .se-img,
 .sie-mainmenu_desktop-sidebar_6 .se-img,
+.sie-menu2nd_view-1_6 .se-img,
+.sie-menu2nd_desktop-sidebar_6 .se-img,
 .sie-navigation-secondary-menu_view-1_9 .se-img,
-.sie-mobile-nav_13 .se-img {
+.sie-mobile-nav_13 .se-img,
+.sie-mobilenav_13 .se-img {
   background-image: none !important;
 }
 
@@ -37,7 +40,9 @@
 
 /* Desktop sidebar/nav logos (261×91px) */
 .sie-mainmenu_view-1_6,
-.sie-mainmenu_desktop-sidebar_6 {
+.sie-mainmenu_desktop-sidebar_6,
+.sie-menu2nd_view-1_6,
+.sie-menu2nd_desktop-sidebar_6 {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -45,7 +50,9 @@
 }
 
 .sie-mainmenu_view-1_6::after,
-.sie-mainmenu_desktop-sidebar_6::after {
+.sie-mainmenu_desktop-sidebar_6::after,
+.sie-menu2nd_view-1_6::after,
+.sie-menu2nd_desktop-sidebar_6::after {
   content: 'Hey Mary';
   font-family: 'Marquette Script', cursive;
   font-size: 52px;
@@ -57,14 +64,16 @@
 }
 
 /* Large centered logo (840×185px desktop / 217×46px mobile) */
-.sie-mobile-nav_13 {
+.sie-mobile-nav_13,
+.sie-mobilenav_13 {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   overflow: visible !important;
 }
 
-.sie-mobile-nav_13::after {
+.sie-mobile-nav_13::after,
+.sie-mobilenav_13::after {
   content: 'Hey Mary';
   font-family: 'Marquette Script', cursive;
   font-size: 90px;
@@ -76,7 +85,8 @@
 }
 
 @media (max-width: 768px) {
-  .sie-mobile-nav_13::after {
+  .sie-mobile-nav_13::after,
+  .sie-mobilenav_13::after {
     font-size: 36px;
   }
 }
@@ -91,7 +101,10 @@
 
 /* --- STAMPS: Replace Hey Ciara stamp CDN images with Mary text --- */
 .sie-life-before_6 .se-img,
-.sie-9-5-job_3 .se-img {
+.sie-9-5-job_3 .se-img,
+.sie-tagged-1_select-gallery_0 .se-img,
+.sie-featured-posts_post-1_4 .se-img,
+.sie-blog-hero-1_13 .se-img {
   background-image: none !important;
 }
 
