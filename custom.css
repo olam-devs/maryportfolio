@@ -132,6 +132,17 @@
   line-height: 1;
 }
 
+/* --- HOMEPAGE: Replace top main picture --- */
+.sie-partnerships_0 .se-img,
+.sie-photo-carousel_0 .se-img {
+  background-image: url('/pictures/home1.jpeg') !important;
+}
+
+/* --- ABOUT PAGE: Replace main hero photo --- */
+.sie-who-is-ciara_0 .se-img {
+  background-image: url('/pictures/about11.jpeg') !important;
+}
+
 /* --- BLOG HERO: Replace welcome section images --- */
 .sie-blog-hero-1_2 .se-img {
   background-image: url('/pictures/blog1.jpeg') !important;
