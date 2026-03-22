@@ -2,6 +2,7 @@
   "name": "hey-mary-blog-studio",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
