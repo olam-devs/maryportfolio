@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/studio/(.*)", "destination": "/studio/index.html" },
+    { "source": "/studio", "destination": "/studio/index.html" }
+  ]
 }

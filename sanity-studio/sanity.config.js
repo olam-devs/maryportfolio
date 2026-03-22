@@ -8,6 +8,7 @@ export default defineConfig({
   title: 'Hey Mary Blog',
   projectId: '3x22qb0n',
   dataset: 'production',
+  basePath: '/studio',
   plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes,
