@@ -132,92 +132,17 @@
   line-height: 1;
 }
 
-/* --- BLOG CATEGORIES: Flex layout, correct order, single-line --- */
-
-/* Make the container a flex row */
-.sib-tagged-1 .sis-tagged-1_select-gallery {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  flex-wrap: nowrap !important;
-  height: 80px !important;
-  overflow: visible !important;
-  position: relative !important;
-}
-
-/* Reset absolute positioning on all category slots */
-.sie-tagged-1_select-gallery_0,
-.sie-tagged-1_select-gallery_1,
-.sie-tagged-1_select-gallery_2,
-.sie-tagged-1_select-gallery_3,
-.sie-tagged-1_select-gallery_4,
-.sie-tagged-1_select-gallery_5,
-.sie-tagged-1_select-gallery_6,
-.sie-tagged-1_select-gallery_7,
-.sie-tagged-1_select-gallery_8,
-.sie-tagged-1_select-gallery_9,
-.sie-tagged-1_select-gallery_10,
-.sie-tagged-1_select-gallery_11 {
-  position: relative !important;
-  left: auto !important;
-  top: auto !important;
-  width: auto !important;
-  height: auto !important;
-  flex-shrink: 0 !important;
-}
-
-/* Hide stamp and all SVG separator elements */
-.sie-tagged-1_select-gallery_0,
-.sie-tagged-1_select-gallery_5,
-.sie-tagged-1_select-gallery_6,
-.sie-tagged-1_select-gallery_7,
-.sie-tagged-1_select-gallery_10 {
-  display: none !important;
-}
-
-/* "Categories:" label */
-.sie-tagged-1_select-gallery_4 {
-  order: 0 !important;
-  padding-right: 10px !important;
-}
-
-/* Category links: order = Adventure, Group, Solo, Itinerary, Restaurants, Hotels & Resorts */
-.sie-tagged-1_select-gallery_1 { order: 1 !important; } /* Adventure Travel */
-.sie-tagged-1_select-gallery_2 { order: 3 !important; } /* Group Travel */
-.sie-tagged-1_select-gallery_3 { order: 5 !important; } /* Solo Travel */
-.sie-tagged-1_select-gallery_8 { order: 7 !important; } /* Itinerary */
-.sie-tagged-1_select-gallery_9 { order: 9 !important; } /* Restaurants */
-.sie-tagged-1_select-gallery_11 { order: 11 !important; } /* Hotels & Resorts */
-
-/* Category links: padding and display */
-.sie-tagged-1_select-gallery_1,
-.sie-tagged-1_select-gallery_2,
-.sie-tagged-1_select-gallery_3,
-.sie-tagged-1_select-gallery_8,
-.sie-tagged-1_select-gallery_9,
-.sie-tagged-1_select-gallery_11 {
-  padding: 0 14px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* Vertical separator bar between each category (except after last) */
-.sie-tagged-1_select-gallery_1,
-.sie-tagged-1_select-gallery_2,
-.sie-tagged-1_select-gallery_3,
-.sie-tagged-1_select-gallery_8,
+/* --- BLOG CATEGORIES: Add missing separator after Restaurants --- */
 .sie-tagged-1_select-gallery_9 {
-  border-right: 2px solid rgba(178, 80, 70, 0.8) !important;
+  overflow: visible !important;
 }
-
-/* Category text: no wrap */
-.sib-tagged-1 h2,
-.sib-tagged-1 .se-t {
-  white-space: nowrap !important;
-  margin: 0 !important;
-}
-
-/* Hide br tags */
-.sib-tagged-1 br {
-  display: none !important;
+.sie-tagged-1_select-gallery_9::after {
+  content: '';
+  position: absolute;
+  left: 108px;
+  top: -14px;
+  width: 3px;
+  height: 45px;
+  background-color: rgba(178, 80, 60, 1);
+  display: block;
 }
