@@ -131,3 +131,13 @@
   white-space: nowrap;
   line-height: 1;
 }
+
+/* --- BLOG CATEGORIES: Force single-line, no breaks --- */
+[class*="sie-tagged-1_select-gallery_"]-text,
+.st-m-heading.st-d-heading,
+.sib-tagged-1 h2 {
+  white-space: nowrap !important;
+}
+.sib-tagged-1 br {
+  display: none !important;
+}
