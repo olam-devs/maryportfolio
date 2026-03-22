@@ -5,4 +5,7 @@ export default defineCliConfig({
     projectId: '3x22qb0n',
     dataset: 'production',
   },
+  vite: {
+    base: '/studio/',
+  },
 })
