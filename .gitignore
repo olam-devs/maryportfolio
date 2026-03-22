@@ -156,6 +156,12 @@ worstpartssolotravel/
 worstpeopletotravelwith/
 images.squarespace-cdn.com/
 
+# Node modules
+node_modules/
+sanity-studio/node_modules/
+sanity-studio/.sanity/
+.sanity/
+
 # OS files
 .DS_Store
 Thumbs.db
