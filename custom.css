@@ -132,6 +132,14 @@
   line-height: 1;
 }
 
+/* --- BLOG HERO: Replace welcome section images --- */
+.sie-blog-hero-1_2 .se-img {
+  background-image: url('/pictures/blog1.jpeg') !important;
+}
+.sie-blog-hero-1_8 .se-img {
+  background-image: url('/pictures/blog2.jpeg') !important;
+}
+
 /* --- BLOG CATEGORIES: Horizontal single-line menu layout --- */
 
 /* Section height: auto to fit content */
