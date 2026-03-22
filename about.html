@@ -1490,18 +1490,29 @@ html.d {background-color:rgba(0,0,0,0);}
     
     <!-- ji02iypbqkmfg_ahwu2yqw/20230717184617Sa88n8k/TUpy_VKlaC -->
   
-<!-- Mary custom image overrides -->
+
+<!-- Mary custom image override -->
 <script>
 (function() {
-  function overrideImages() {
-    // About page: hero picture above 'About Mary! I am a global citizen...'
-    var els = document.querySelectorAll('.sie-main-hero-1_0 .se-img');
-    els.forEach(function(el) { el.style.backgroundImage = 'url("/pictures/home1.jpeg")'; });
+  var SEL = ".sie-main-hero-1_0 .se-img";
+  var IMG = "/pictures/home1.jpeg";
+  function forceImg() {
+    var el = document.querySelector(SEL);
+    if (el) {
+      el.style.setProperty('background-image', 'url("' + IMG + '")', 'important');
+      var obs = new MutationObserver(function() {
+        el.style.setProperty('background-image', 'url("' + IMG + '")', 'important');
+      });
+      obs.observe(el, { attributes: true, attributeFilter: ['style'] });
+    }
   }
-  overrideImages();
-  setTimeout(overrideImages, 500);
-  setTimeout(overrideImages, 1500);
-  window.addEventListener('load', overrideImages);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', forceImg);
+  } else {
+    forceImg();
+  }
+  setTimeout(forceImg, 300);
+  setTimeout(forceImg, 1000);
 })();
 </script>
 </body>
