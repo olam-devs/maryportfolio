@@ -175,13 +175,14 @@
 }
 
 .sie-partnerships_view-1_3-text::after {
-  content: "I am passionate about collaborating with brands that value authenticity and discovery. By blending cinematic storytelling with strategic digital marketing, I help hotels, restaurants, and destinations increase their visibility and connect with a new generation of conscious travelers.";
+  content: "How We Can Work Together\A\AUser-Generated Content (UGC): High-quality Reels and photos for your brand’s own social channels.\ABrand Features & Reviews: Dedicated blog posts and social media coverage highlighting the hidden gems of your property or menu.\ASocial Media Management: Professional strategy and content execution for hospitality brands.\AExperience Design: Curating and marketing group excursions that showcase your location.\A\ADownload Media Kit (PDF): Coming soon";
   display: block;
   font-size: 19px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 1);
   font-family: 'Karla';
   margin-top: -14px;
+  white-space: pre-line;
 }
 
 @media (max-width: 768px) {
