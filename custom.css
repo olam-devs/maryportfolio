@@ -146,37 +146,34 @@
 }
 
 .sie-partnerships_view-1_1-text::after {
-  content: "Mary customized portfolio";
-  display: block;
-  font-size: 44px;
-  line-height: 1.05;
-  color: rgba(224, 87, 71, 1);
-  font-family: 'Baskerville Bold';
+  content: "";
+  display: none;
 }
 
 .sie-partnerships_view-1_2-text::after {
   content: "Digital Marketing Strategist \0026  Travel Storyteller";
   display: block;
-  font-size: 22px;
-  line-height: 1.2;
-  color: rgba(0, 0, 0, 1);
-  font-family: 'Karla Bold';
-  letter-spacing: 0.02em;
+  font-size: 44px;
+  line-height: 1.05;
+  color: rgba(224, 87, 71, 1);
+  font-family: 'Baskerville Bold';
+  letter-spacing: 0;
+  margin-top: -18px;
 }
 
 .sie-partnerships_view-1_3-text::after {
   content: "I am passionate about collaborating with brands that value authenticity and discovery. By blending cinematic storytelling with strategic digital marketing, I help hotels, restaurants, and destinations increase their visibility and connect with a new generation of conscious travelers.";
   display: block;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 1);
   font-family: 'Karla';
+  margin-top: -8px;
 }
 
 @media (max-width: 768px) {
-  .sie-partnerships_view-1_1-text::after { font-size: 34px; text-align: center; }
-  .sie-partnerships_view-1_2-text::after { font-size: 18px; text-align: center; }
-  .sie-partnerships_view-1_3-text::after { font-size: 15px; }
+  .sie-partnerships_view-1_2-text::after { font-size: 34px; text-align: center; margin-top: -10px; }
+  .sie-partnerships_view-1_3-text::after { font-size: 18px; margin-top: -6px; }
 }
 
 /* --- ABOUT PAGE: Replace hero picture above 'About Mary! I'm a global citizen...' --- */
