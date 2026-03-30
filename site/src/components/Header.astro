@@ -1,0 +1,33 @@
+---
+type NavItem = { label: string; path: string };
+type Props = {
+  logoText: string;
+  nav: NavItem[];
+  activePath?: string;
+};
+
+const { logoText, nav, activePath } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 border-b border-black/5 bg-[#FDF9EC]/80 backdrop-blur">
+  <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
+    <a href="/" class="text-xl font-semibold tracking-tight" style="font-family: 'Playfair Display', serif;">
+      {logoText}
+    </a>
+
+    <nav class="hidden gap-6 md:flex">
+      {nav.map((item) => (
+        <a
+          href={item.path}
+          class:list={[
+            "text-sm font-semibold uppercase tracking-[0.08em] transition-colors",
+            activePath === item.path ? "text-[#E05747]" : "text-neutral-900 hover:text-[#E05747]",
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+

@@ -1,0 +1,41 @@
+---
+import { urlFor } from "../lib/sanityImage";
+
+type Props = {
+  eyebrow?: string;
+  headline?: string;
+  subheadline?: string;
+  body?: string;
+  heroImage?: any;
+};
+
+const { eyebrow, headline, subheadline, body, heroImage } = Astro.props;
+const heroImg = heroImage ? urlFor(heroImage).width(1800).height(1000).fit("crop").url() : null;
+---
+
+<section class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-12 md:items-center">
+  <div class="md:col-span-6">
+    {eyebrow ? (
+      <p class="text-sm font-bold uppercase tracking-[0.16em] text-[#146D57]">{eyebrow}</p>
+    ) : null}
+
+    <h1 class="mt-4 text-4xl font-semibold leading-[1.02] tracking-tight md:text-6xl" style="font-family: 'Playfair Display', serif;">
+      {headline}
+    </h1>
+    {subheadline ? <p class="mt-5 max-w-prose text-lg text-neutral-700">{subheadline}</p> : null}
+    {body ? <p class="mt-5 max-w-prose text-neutral-700">{body}</p> : null}
+  </div>
+
+  <div class="md:col-span-6">
+    <div class="relative overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+      {heroImg ? (
+        <img class="h-[320px] w-full object-cover md:h-[440px]" src={heroImg} alt="" loading="lazy" />
+      ) : (
+        <div class="flex h-[320px] items-center justify-center bg-gradient-to-br from-[#F2D3BE] to-[#FDF9EC] text-sm text-neutral-600 md:h-[440px]">
+          Image placeholder (you’ll replace)
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+

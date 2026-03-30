@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PageHero from "../components/PageHero.astro";
+import { getSiteSettings } from "../lib/getSiteSettings";
+
+const data = await getSiteSettings();
+---
+
+<BaseLayout title={`${data?.siteTitle ?? "Hey Mary"} — About`}>
+  <Header logoText={data?.logoText ?? "Hey Mary"} nav={data?.navigation ?? []} activePath="/about" />
+  <main>
+    <PageHero {...(data?.about ?? {})} />
+  </main>
+  <Footer email={data?.social?.email} instagram={data?.social?.instagram} />
+</BaseLayout>
+

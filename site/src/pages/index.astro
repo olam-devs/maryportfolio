@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { sanity } from "../lib/sanity";
+import { urlFor } from "../lib/sanityImage";
+
+const data = await sanity.fetch(`*[_type=="siteSettings"][0]{
+  siteTitle,
+  tagline,
+  logoText,
+  navigation,
+  home,
+  brands[]{name,url,logo},
+  social
+}`);
+
+const heroImg = data?.home?.heroImage ? urlFor(data.home.heroImage).width(1600).height(900).fit("crop").url() : null;
+---
+
+<BaseLayout title={data?.siteTitle ?? "Hey Mary"} description={data?.tagline ?? undefined}>
+  <Header logoText={data?.logoText ?? "Hey Mary"} nav={data?.navigation ?? []} activePath="/" />
+
+  <main>
+    <section class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-12 md:items-center">
+      <div class="md:col-span-6">
+        {data?.home?.eyebrow ? (
+          <p class="text-sm font-bold uppercase tracking-[0.16em] text-[#146D57]">{data.home.eyebrow}</p>
+        ) : null}
+
+        <h1 class="mt-4 text-4xl font-semibold leading-[1.02] tracking-tight md:text-6xl" style="font-family: 'Playfair Display', serif;">
+          {data?.home?.headline ?? "Digital Marketing Strategist & Travel Storyteller"}
+        </h1>
+        <p class="mt-5 max-w-prose text-lg text-neutral-700">
+          {data?.home?.subheadline ??
+            "A clean, CMS-editable rebuild—same vibe, fully yours."}
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="rounded-md bg-[#E05747] px-5 py-3 text-sm font-semibold text-white hover:bg-[#d54f41]" href="/portfolio">
+            View portfolio
+          </a>
+          <a class="rounded-md border border-black/15 bg-white px-5 py-3 text-sm font-semibold text-neutral-900 hover:border-black/25" href="/contact">
+            Work together
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-6">
+        <div class="relative overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          {heroImg ? (
+            <img class="h-[360px] w-full object-cover md:h-[460px]" src={heroImg} alt="" loading="eager" />
+          ) : (
+            <div class="flex h-[360px] items-center justify-center bg-gradient-to-br from-[#F2D3BE] to-[#FDF9EC] text-sm text-neutral-600 md:h-[460px]">
+              Hero image placeholder (you’ll replace)
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-black/10 bg-white">
+      <div class="mx-auto max-w-6xl px-5 py-10">
+        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-[#146D57]">
+          Brands I’ve worked with
+        </p>
+        <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+          {(data?.brands ?? []).slice(0, 6).map((b: any) => {
+            const logoUrl = b.logo ? urlFor(b.logo).width(260).height(120).fit("max").url() : null;
+            const content = logoUrl ? (
+              <img class="mx-auto h-10 w-auto opacity-80" src={logoUrl} alt={b.name ?? ""} loading="lazy" />
+            ) : (
+              <div class="mx-auto flex h-10 w-full items-center justify-center rounded-md bg-[#FDF9EC] text-xs text-neutral-600">
+                {b.name ?? "Brand"}
+              </div>
+            );
+            return b.url ? (
+              <a href={b.url} target="_blank" rel="noreferrer" class="rounded-md p-3 hover:bg-[#FDF9EC]">
+                {content}
+              </a>
+            ) : (
+              <div class="rounded-md p-3">{content}</div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer email={data?.social?.email} instagram={data?.social?.instagram} />
+</BaseLayout>
