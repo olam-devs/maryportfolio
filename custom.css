@@ -175,20 +175,60 @@
 }
 
 .sie-partnerships_view-1_3-text::after {
-  content: "How We Can Work Together\A\AUser-Generated Content (UGC): High-quality Reels and photos for your brand’s own social channels.\ABrand Features & Reviews: Dedicated blog posts and social media coverage highlighting the hidden gems of your property or menu.\ASocial Media Management: Professional strategy and content execution for hospitality brands.\AExperience Design: Curating and marketing group excursions that showcase your location.\A\ADownload Media Kit (PDF): Coming soon";
+  content: "I am passionate about collaborating with brands that value authenticity and discovery. By blending cinematic storytelling with strategic digital marketing, I help hotels, restaurants, and destinations increase their visibility and connect with a new generation of conscious travelers.";
   display: block;
   font-size: 19px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 1);
   font-family: 'Karla';
   margin-top: -14px;
-  white-space: pre-line;
+  white-space: normal;
 }
 
 @media (max-width: 768px) {
   .sie-partnerships_view-1_0-text::after { text-align: center; margin-top: -18px; }
   .sie-partnerships_view-1_2-text::after { font-size: 34px; text-align: center; margin-top: -18px; }
   .sie-partnerships_view-1_3-text::after { font-size: 17px; margin-top: -10px; }
+}
+
+/* --- PORTFOLIO: Replace "Featured Projects" area with "How We Can Work Together" --- */
+/* This page is a Showit mirror; we hide the generated module and render a new one via CSS. */
+.sib-packinglist-1 .sc > * {
+  display: none !important;
+}
+
+.sib-packinglist-1 .sc {
+  position: relative !important;
+  padding: 72px 80px !important;
+}
+
+.sib-packinglist-1 .sc::before {
+  content: "How We Can Work Together\A\A• User-Generated Content (UGC): High-quality Reels and photos for your brand’s own social channels.\A• Brand Features & Reviews: Dedicated blog posts and social media coverage highlighting the hidden gems of your property or menu.\A• Social Media Management: Professional strategy and content execution for hospitality brands.\A• Experience Design: Curating and marketing group excursions that showcase your location.";
+  display: block;
+  white-space: pre-line;
+  max-width: 760px;
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Karla';
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.sib-packinglist-1 .sc::after {
+  content: "Download Media Kit";
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: rgba(224, 87, 71, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Karla Bold';
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .sib-packinglist-1 .sc { padding: 44px 22px !important; }
+  .sib-packinglist-1 .sc::before { font-size: 16px; }
 }
 
 /* --- ABOUT PAGE: Replace hero picture above 'About Mary! I'm a global citizen...' --- */
