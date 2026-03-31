@@ -1,3 +1,3 @@
-import siteSettings from './siteSettings'
+import post from './post'
 
-export const schemaTypes = [siteSettings]
+export const schemaTypes = [post]

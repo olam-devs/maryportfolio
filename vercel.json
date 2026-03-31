@@ -1,15 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "builds": [
-    {
-      "src": "site/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "site/dist"
-      }
-    }
-  ],
   "rewrites": [
     { "source": "/studio/(.*)", "destination": "/studio/index.html" },
     { "source": "/studio", "destination": "/studio/index.html" }
